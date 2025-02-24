@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className='hidden md:flex space-x-6'>
-          <Link to="#" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
+          <Link to="/graduation" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
             Graduation Packages
           </Link>
           <Link to="#" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
@@ -69,7 +69,7 @@ const Navbar = () => {
           <h2 className='text-xl font-semibold mb-4'>Menu</h2>
           <nav className='space-y-4'>
             <Link 
-            to="#" 
+            to="/graduation" 
             onClick={toggNavDrawerOpen} 
             className='block text-gray-600 hover:text-black'
             >
