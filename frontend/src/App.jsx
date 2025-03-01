@@ -10,6 +10,7 @@ import GraduationPackages from './pages/GraduationPackages';
 import ProductDetails from './components/Products/ProductDetails';
 import NewArrivals from './components/Products/NewArrivals';
 import Checkout from './components/Cart/Checkout';
+import OrderConfirmation from './pages/OrderConfirmation';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='graduation' element={<GraduationPackages />} />
           <Route path='product/:id' element={<ProductDetails />} />
           <Route path='checkout' element={<Checkout />} />
+          <Route path='order-confirmation' element={<OrderConfirmation />} />
         </Route>
         <Route></Route>
       </Routes>
