@@ -1,38 +1,22 @@
-import React from 'react'
-
-const checkout = {
-    _id: '123434',
-    createdAt: new Date(),
-    checkedoutItems: [
-      {
-        productId: '1',
-        name: 'Cap',
-        color: 'Black',
-        size: 'M',
-        price: 100,
-        quantity: 1,
-        image: 'https://picsum.photos/150?random=1',
-      },
-      {
-        productId: '2',
-        name: 'Gown',
-        color: 'Black',
-        size: 'S',
-        price: 150,
-        quantity: 2,
-        image: 'https://picsum.photos/150?random=2',
-      },
-
-    ],
-    shippingAddress: {
-      address: '331 Baldwin Ave',
-      city: 'Jersey',
-      country: "USA",
-    },
-};
-
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { clearCart } from '../redux/slices/cartSlice';
 
 const OrderConfirmation = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const {checkout} = useSelector((state) => state.checkout);
+
+  // Clear the cart when the order is confirmed
+  useEffect(() => {
+    if (checkout && checkout._id) {
+      dispatch(clearCart());
+      localStorage.removeItem("cart");
+    } else {
+      navigate("/my-order");
+    }
+  }, [checkout, dispatch, navigate]);
 
   const calculateEstimatedDelivery = (createdAt) => {
       const orderDate = new Date(createdAt);
@@ -66,7 +50,7 @@ const OrderConfirmation = () => {
         </div>
         {/* Ordered Items */}
         <div className='mb-20'>
-          {checkout.checkedoutItems.map((item) => (
+          {checkout.checkoutItems.map((item) => (
               <div 
                 key={item.productId}
                 className='flex items-center mb-4'>

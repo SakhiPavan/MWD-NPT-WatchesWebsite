@@ -1,34 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'sonner';
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProductDetails } from '../../redux/slices/productSlice';
+import { addToCart } from '../../redux/slices/cartSlice';
 
 
-const selectedProduct = {
-  name: "Cap & Gown",
-  price: 200,
-  originalPrice: 250,
-  description: "Whole Dresscode ",
-  brand: "Pace University",
-  material: "Silk",
-  sizes: ["S", "M", "L", "XL"],
-  colors: ["Black", "Blue"],
-  images: [
-    {
-    url: "https://picsum.photos/500/500?random=1",
-    altText: "Cap & Gown 1"
-    },
-    {
-      url: "https://picsum.photos/500/500?random=2",
-      altText: "Cap & Gown 2"
-    }
-  ]
-}
 
-const ProductDetails = () => {
+const ProductDetails = ({ productId }) => {
+    const { id } = useParams();
+    const dispatch = useDispatch();
+    const {selectedProduct, loading, error} = useSelector((state) => state.products);
+    const{ user, guestId } = useSelector((state) => state.auth);
     const [mainImage, setMainImage] = useState("");
     const [selectedSize, setSelectedSize] = useState("");
     const [selectedColor, setSelectedColor] = useState("");
     const [quantity, setQuantity] = useState(1);
     const [isButtonDisabled, setIsButtonDisabled ] = useState(false);
+
+    const productFetchId = productId || id;
+
+    useEffect(() => {
+      if(productFetchId) {
+        dispatch(fetchProductDetails(productFetchId));
+        // dispatch(fetchSimilarProducts({id: productFetchId}));
+      }
+    },[dispatch, productFetchId]);
 
     useEffect(() => {
       if(selectedProduct?.images?.length > 0) {
@@ -50,17 +47,38 @@ const ProductDetails = () => {
       }
       setIsButtonDisabled(true);
 
-      setTimeout(() => {
+      dispatch(
+        addToCart({
+          productId: productFetchId,
+          quantity,
+          size: selectedSize,
+          color: selectedColor,
+          guestId,
+          userId: user?._id,
+        })
+      )
+      .then(() => {
         toast.success("Product added to cart!", {
           duration: 1000,
         });
-        setIsButtonDisabled(false);
-      }, 500);
+      })
+      .finally(() => {
+        setIsButtonDisabled(false)
+      })
     };
+
+    if(loading) {
+      return <p>Loading...</p>
+    }
+
+    if(error) {
+      return <p>Error: {error}</p>;
+    }
 
   return (
     <div className='p-6'>
-      <div className='max-w-6xl mx-auto bg-white p-8 rounded-lg'>
+      {selectedProduct && (
+        <div className='max-w-6xl mx-auto bg-white p-8 rounded-lg'>
         <div className='flex flex-col md:flex-row'>
           {/* Left Tumbnail */}
           <div className='hidden md:flex flex-col space-y-4 mr-6'>
@@ -96,7 +114,7 @@ const ProductDetails = () => {
           </div>
           {/* Right Side */}
           <div className='md:w-1/2 md:ml-10'>
-            <h1 text-2xl md:text-3xl font-semibold mb-2>
+            <h1 text-5xl md:text-3xl font-bold mb-2>
               {selectedProduct.name}
             </h1>
 
@@ -181,7 +199,8 @@ const ProductDetails = () => {
         <div className='mt-20'>
           <h2 className='text-2xl text-center'></h2>
         </div>
-      </div>
+        </div>
+      )}
     </div>
   )
 }
