@@ -2,7 +2,7 @@
 
 ## Problem Statement  
 
-This project aims to develop a **full-stack e-commerce platform** for the ** For NPT Watches** brand. The platform will provide a **seamless online shopping experience**, where users can **browse, purchase, and manage watches**.
+This project aims to develop a **full-stack e-commerce platform** for **NPT Watches** brand. The platform will provide a **seamless online shopping experience**, where users can **browse, purchase, and manage watches**.
 
 ### Tech Stack  
 - **Frontend:** Vite + React.js *(for a fast, dynamic, and modern UI)*  
