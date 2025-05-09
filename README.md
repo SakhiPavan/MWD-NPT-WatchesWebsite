@@ -32,16 +32,3 @@ By creating a modern e-commerce platform for **MWD-NPT Watches**, we believe tha
 |---------------|---------------------|------------|
 | ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code) | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git) | ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier) |
 |  | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github) |  |
-
----
-
-## Installation & Setup Guide
-
-### ✅ Prerequisites  
-Ensure the following are installed on your **macOS** system:
-
-- **Terminal** or **iTerm**
-- **Homebrew**  
-  Install Homebrew if not already installed:
-  ```bash
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
