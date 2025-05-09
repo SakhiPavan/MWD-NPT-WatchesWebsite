@@ -1,71 +1,47 @@
-# 🛠️ Full-Stack Project Setup Guide  
-**Project:** MWD-NPT-WatchesWebsite  
-**Technologies:** Node.js, npm, Vite (Frontend), Express (Backend)
+# MWD-NPT-WatchesWebsite
+
+## Problem Statement  
+
+This project aims to develop a **full-stack e-commerce platform** for the **MWD-NPT Watches** brand. The platform will provide a **seamless online shopping experience**, where users can **browse, purchase, and manage watches**.
+
+### Tech Stack  
+- **Frontend:** Vite + React.js *(for a fast, dynamic, and modern UI)*  
+- **Backend:** Node.js with Express.js *(for API handling and business logic)*  
+- **Authentication:** JWT *(for secure user login and session management)*  
+- **Database:** MongoDB *(for storing product and user data)*  
+- **Deployment:** Vercel / Firebase Hosting *(for frontend)* and Render / Railway *(for backend)*  
+
+### Expected Outcome  
+A **user-friendly, secure, and scalable e-commerce website**, where users can easily browse, add to cart, and securely purchase products with integrated backend services for order management and user authentication.
 
 ---
 
-## ✅ Prerequisites
+## Hypothesis  
 
-Before starting, ensure the following are installed on your **macOS** system:
+By creating a modern e-commerce platform for **MWD-NPT Watches**, we believe that customers will enjoy a seamless, secure, and fast shopping experience, making their purchase process quick and intuitive.
+
+---
+
+## Technologies  
+
+| **Frontend** | **Backend** | **Database** | **Authentication** | **Deployment** |
+|--------------|-------------|--------------|---------------------|----------------|
+| ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react) | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs) ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express) | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb) | ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens) | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel) ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render) |
+
+| **Dev Tools** | **Version Control** | **Editor** |
+|---------------|---------------------|------------|
+| ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code) | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git) | ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier) |
+|  | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github) |  |
+
+---
+
+## Installation & Setup Guide
+
+### ✅ Prerequisites  
+Ensure the following are installed on your **macOS** system:
 
 - **Terminal** or **iTerm**
 - **Homebrew**  
   Install Homebrew if not already installed:
   ```bash
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-Node.js + npm via Homebrew:
-
-bash
-Copy
-Edit
-brew install node
-Confirm installation:
-
-bash
-Copy
-Edit
-node -v
-npm -v
-🚀 Project Setup Instructions
-🔹 1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/SakhiPavan/MWD-NPT-WatchesWebsite.git
-cd MWD-NPT-WatchesWebsite
-🔹 2. Set Up the Frontend
-bash
-Copy
-Edit
-cd frontend
-npm install         # Install Vite and frontend dependencies
-npm run dev         # Start the frontend development server
-Frontend will be available at: http://localhost:5173
-
-🔹 3. Set Up the Backend
-Open a new terminal tab or window, then run:
-
-bash
-Copy
-Edit
-cd MWD-NPT-WatchesWebsite/backend
-npm install         # Install backend dependencies
-npm run dev         # Start the backend server
-Backend will be running at: http://localhost:3000
-
-🧪 4. Testing the Application
-Open your browser and go to: http://localhost:5173
-
-The frontend should load and connect to the backend successfully
-
-Use browser DevTools > Network tab to verify API requests and responses
-
-📌 Notes
-If you see an error like vite: command not found, make sure:
-
-You are in the frontend directory
-
-You have run npm install to install dependencies
-
-Ensure that any necessary .env files are present if your backend or frontend needs environment-specific variables.
-
