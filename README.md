@@ -1,8 +1,8 @@
-# MWD-NPT-WatchesWebsite
+# WEB APPLICATION FOR NPT WATCHES USING THE MERN STACK
 
 ## Problem Statement  
 
-This project aims to develop a **full-stack e-commerce platform** for the **MWD-NPT Watches** brand. The platform will provide a **seamless online shopping experience**, where users can **browse, purchase, and manage watches**.
+This project aims to develop a **full-stack e-commerce platform** for the ** For NPT Watches** brand. The platform will provide a **seamless online shopping experience**, where users can **browse, purchase, and manage watches**.
 
 ### Tech Stack  
 - **Frontend:** Vite + React.js *(for a fast, dynamic, and modern UI)*  
@@ -18,7 +18,7 @@ A **user-friendly, secure, and scalable e-commerce website**, where users can ea
 
 ## Hypothesis  
 
-By creating a modern e-commerce platform for **MWD-NPT Watches**, we believe that customers will enjoy a seamless, secure, and fast shopping experience, making their purchase process quick and intuitive.
+By creating a modern e-commerce platform for **NPT Watches**, we believe that customers will enjoy a seamless, secure, and fast shopping experience, making their purchase process quick and intuitive.
 
 ---
 
