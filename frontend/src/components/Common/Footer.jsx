@@ -35,17 +35,17 @@ const Footer = () => {
           <ul className='space-y-2 text-gray-600'>
             <li>
               <Link to="#" className="hover:text-gray-500 transition-colors">
-                Graduation Packages
+                Men's Store
               </Link>
             </li>
             <li>
               <Link to="#" className="hover:text-gray-500 transition-colors">
-                Caps & Gown
+                Women's Store
               </Link>
             </li>
             <li>
               <Link to="#" className="hover:text-gray-500 transition-colors">
-                Frames
+                Collections
               </Link>
             </li>
           </ul>
@@ -110,7 +110,7 @@ const Footer = () => {
       {/* Footer Bottom*/}
       <div className='container mx-auto mt-12 px-4 lg:px-0 border-t border-gray-200 pt-6'>
         <p className='text-gray-500 text-sm tracking-tighter text-center'> 
-        © 2025, CS-691-Team-4. All Rights Reserved.
+        © 2025. All Rights Reserved.
         </p>
       </div>
     </footer>

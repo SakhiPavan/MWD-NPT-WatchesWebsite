@@ -30,18 +30,18 @@ const Navbar = () => {
       <nav className='container mx-auto flex items-center justify-between py-4 px-6'>
         <div>
           <Link to="/" className="text-[45px] font-bold font-uniform text-Pace-blue">
-            Pace University
+            NPT Watch Store
           </Link>
         </div>
         <div className='hidden md:flex space-x-6'>
           <Link to="/graduation/all" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
-            Graduation Packages
+            Men's Store
           </Link>
           <Link to="/graduation/all?category=Cap%26Gown" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
-            Cap & Gown
+            Women's Store
           </Link>
           <Link to="/graduation/all?category=Frames" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
-            Diploma Frames
+            Collections
           </Link>
         </div>
           <div className='flex items-center space-x-4'>

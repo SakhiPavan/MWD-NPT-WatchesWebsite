@@ -19,9 +19,9 @@ const GraduationPackages = () => {
   
   
   return <div className='flex flex-col items-center justify-center text-center font-bold '>
-    <h1 className='mb-4 mt-6 font-vold text-3xl'>Graduation Packages</h1>
+    <h1 className='mb-4 mt-6 font-vold text-3xl'>Men's & Women's Store</h1>
     <p className='mb-4 mt-2 font-semibold'>
-    Get everything you need for graduation with a Grad Pack! Grad Packs are your one-stop shop for essential and memorable items, conveniently bundled together.
+    Elevate your style with our men’s and women's watches—crafted for precision, built for strength, and designed to impress. Timeless elegance meets modern functionality in every detail.
     </p>
     <ProductGrid products={products} loading={loading} error={error}/>
   </div>
